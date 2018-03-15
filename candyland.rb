@@ -100,6 +100,17 @@ File.open("#{basename}.html", 'w') do |f|
   end
 
   f << "</table>\n"
+
+  f << "<br/>legend<br/>"
+  f << "<table>\n"
+  labels.each_with_index do |label, index|
+    f << "<tr>\n"
+    f << "<td bgcolor='##{colors[index]}'>#{label}</td>"
+    f << "</tr>\n"
+  end
+
+  f << "</table>\n"
+
   f << "</body>\n"
   f << "</html>\n"
 end
